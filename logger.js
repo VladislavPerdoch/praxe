@@ -1,9 +1,11 @@
-console.log(__filename);
-console.log(__dirname);
+//Module
+//console.log(__filename);
+//console.log(__dirname);
 var ulr = 'hhtp>//mzlogger';
 
 function log(message){
     console.log(message);
 }
 
-module.export = log;
+module.exports.log = log;
+module.exports.ulr = ulr;
