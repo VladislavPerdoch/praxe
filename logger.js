@@ -1,11 +1,13 @@
-//Module
-//console.log(__filename);
-//console.log(__dirname);
-var ulr = 'hhtp>//mzlogger';
+const EventEmitter = require('events');
+var url = 'hhtp///mylogger';
 
-function log(message){
+class Logger extends EventEmitter{
+    log(message){
+    
     console.log(message);
+    //raise an event
+    this.emit('messageLogged', {id: 1 , ulr: url});
+}
 }
 
-module.exports.log = log;
-module.exports.ulr = ulr;
+module.exports = Logger;
