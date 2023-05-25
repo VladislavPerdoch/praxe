@@ -24,7 +24,7 @@ const os = require('os');
 
 var totalMemory = os.totalmem;
 var freeMemory = os.freemem;
-console.log('Total Memory' + totalMemory);
+console.log('Total Memory ' + totalMemory);
 console.log('Free Memory ' + freeMemory);
 
 
@@ -83,7 +83,3 @@ const server = http.createServer((req, res) => {
 
 server.listen(3000);
 console.log('Listening on port 3000...');
-
-
-
-

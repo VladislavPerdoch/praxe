@@ -10,7 +10,7 @@ let lastName = 'Kacer';
 const interestRate = 0.3;
 //cant change
 
-//types String,Number,Boolean,undefined,null;
+//types String,Number,Boolean,undefined,null
 
 //let name = 'Mosh' //String
 //let age = 30; //Number
