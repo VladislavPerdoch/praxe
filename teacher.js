@@ -1,15 +1,13 @@
- import {Person} from './person';
+const Person = require('./person.js');
 
- export function promote() {}
- 
- export default class Teacher extends Person{
-    constructor(name, degree) {
-        super(name);
-        this.degree = degree;
-    }
-    
-    teach() {
-        console.log("teacher");
-
-    }
+class Teacher extends Person {
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+  teach() {
+    console.log("teach");
+  }
 }
+
+module.exports = Teacher;

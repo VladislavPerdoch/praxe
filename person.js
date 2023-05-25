@@ -1,9 +1,8 @@
-export class Person {
-    constructor(name) {
-        this.name = name;
+class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
     }
-    
-    walk() {
-        console.log("walk");
-    }
- }
+  }
+  
+  module.exports = Person;

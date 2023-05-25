@@ -35,7 +35,7 @@ const jobs = [
     { id: 3, isActive: false},
 ];
 
-const activeJobs = jobs.filter( job => job.isActive); 
+const activeJobs = jobs.filter( job => job.isActive=='false'); 
 console.log(activeJobs);
 
 
@@ -92,21 +92,22 @@ console.log(mix2);
  
 
 
- const person3 = new Person('Mosh');
- person3.walk();
+ //const person3 = new Person('Mosh');
+ //person3.walk();
 //console.log(person3()); nefunguje
-console.log(person3.name);
+//console.log(person3.name);
 
 //Inheritance
 
 
-import  Teacher, { promote }  from "./teacher";
-import React, { Component } from 'react';
+const Teacher = require("./teacher");
+//import React, { Component } from 'react';
 
 // Default -> import ... from '';
 // Named -> import { ... } from '';
 
 const teacher = new Teacher('Mosh','Msc');
+teacher.teach();
 
 //Classes
 //teacher.js
