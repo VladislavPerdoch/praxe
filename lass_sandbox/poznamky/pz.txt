@@ -1,0 +1,3 @@
+less-watch-compiler <folder to watch> <folder to output>
+lessc <file.less> <file.css>
+less-watch-compiler
