@@ -1,17 +1,12 @@
 import React from 'react'
-import { Card, CardMedia, CardContent, CardActions, Typography, IconBotton, IconButton } from "@material-ui/core";
+import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from "@material-ui/core";
 import{ AddShoppingCart } from "@material-ui/icons";
 
 import useStyles from "./styles";
-import Products from '../products';
-
-
 
 const Product = ({ product, onAddToCart }) => {
     const classes = useStyles();
-
-    console.log(Products);
-  return (
+    return (
     <Card className={classes.root}>
         <CardMedia className={classes.media} image={product.image.url} title={product.name}/>
         <CardContent>
