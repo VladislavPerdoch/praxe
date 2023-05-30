@@ -6,10 +6,10 @@ import useStyles from "./styles"
 
 const CartItem = ({ item }) => {
     const classes = useStyles();
-    console.log(item?.media?.source)
+    console.log(item)
   return (
     <Card>
-        <CardMedia image={item?.media?.source} alt={item?.name} className={classes.media}/>
+        <CardMedia image={item?.image.url} alt={item?.name} className={classes.media}/>
         <CardContent className={classes.cardContent}> 
             <Typography variant="h4">{item?.name}</Typography>
             <Typography variant="h5">{item?.line_total?.formatted_with_symbol}</Typography>

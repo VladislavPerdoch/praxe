@@ -8,8 +8,11 @@ const App = () => {
     const [cart, setCart] = useState({});
 
     const handleAddToCart = async (productId, quantity) => {
-        const item = await commerce.cart.add(productId, quantity);
-        setCart(item.cart);
+        commerce.cart.add(productId, quantity).then((item) => {
+            if (item) {
+                setCart(item.cart);
+            }
+        });
     };
 
     useEffect(() => {
