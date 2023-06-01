@@ -36,7 +36,8 @@ const App = () => {
     
       const handleUpdateCartQty = async (productId, quantity) => {
         const  cart  = await commerce.cart.update(productId, quantity );
-        setCart(cart);
+        setCart(await commerce.cart.retrieve());
+        
         console.log("pridat");
         console.log(cart)
         console.log(productId)

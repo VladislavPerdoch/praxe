@@ -29,7 +29,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
           console.log(checkoutToken.line_items)
 
         } catch {
-          if (activeStep !== steps.length) history('/');
+         // if (activeStep !== steps.length) history('/');
         }
       };
 
