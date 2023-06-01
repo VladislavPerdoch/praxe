@@ -26,14 +26,20 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
           const token = await commerce.checkout.generateToken(cart.id, { type: 'cart' });
           console.log(token)
           setCheckoutToken(token)
+          console.log(checkoutToken.line_items)
+
         } catch {
-          if (activeStep !== steps.length) history.push('/');
+          if (activeStep !== steps.length) history('/');
         }
       };
 
       generateToken();
     }
   }, [cart]);
+
+
+  
+
 
   const test = (data) => {
     setShippingData(data);
