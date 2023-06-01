@@ -35,18 +35,22 @@ const App = () => {
     
     
       const handleUpdateCartQty = async (productId, quantity) => {
-        const { cart } = await commerce.cart.update(productId, quantity );
+        const  cart  = await commerce.cart.update(productId, quantity );
         setCart(cart);
+        console.log("pridat");
+        console.log(cart)
+        console.log(productId)
+        console.log(quantity)
       };
 
     const handleRemoveFromCart = async (productId) => {
-        const {cart} = await commerce.cart.remove(productId);
+        const cart = await commerce.cart.remove(productId);
 
         setCart(cart);
     }
 
     const handleEmptyCart = async () => {
-        const {cart} = await commerce.cart.empty();
+        const cart = await commerce.cart.empty();
 
         setCart(cart);
     }
